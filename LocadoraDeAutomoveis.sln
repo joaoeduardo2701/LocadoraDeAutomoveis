@@ -17,11 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compartilhado", "Compartilh
 		IRepositorio.cs = IRepositorio.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraDeAutomoveis", "LocadoraDeAutomoveis\LocadoraDeAutomoveis.csproj", "{7C7F2056-6107-420F-866C-09D23EA91305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis", "LocadoraDeAutomoveis\LocadoraDeAutomoveis.csproj", "{7C7F2056-6107-420F-866C-09D23EA91305}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloFuncionario", "ModuloFuncionario", "{6094C486-13B3-43BB-A978-DA32536546C9}"
 	ProjectSection(SolutionItems) = preProject
 		Funcionario.cs = Funcionario.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloGrupoAutomoveis", "ModuloGrupoAutomoveis", "{8482688B-FDBE-446D-8599-8CD4B7EABECC}"
+	ProjectSection(SolutionItems) = preProject
+		GrupoAutomoveis.cs = GrupoAutomoveis.cs
 	EndProjectSection
 EndProject
 Global
@@ -42,6 +47,7 @@ Global
 		{DB5368B3-9003-487A-98FC-104E2CFDB3F6} = {32CC05E8-20E6-4A31-AD82-4F1FF7321686}
 		{7C7F2056-6107-420F-866C-09D23EA91305} = {DD02A324-CD35-4CBB-AC28-D324F0F94AE8}
 		{6094C486-13B3-43BB-A978-DA32536546C9} = {32CC05E8-20E6-4A31-AD82-4F1FF7321686}
+		{8482688B-FDBE-446D-8599-8CD4B7EABECC} = {32CC05E8-20E6-4A31-AD82-4F1FF7321686}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85C9D906-71AF-4DB3-9834-CFB5BE0F3870}
