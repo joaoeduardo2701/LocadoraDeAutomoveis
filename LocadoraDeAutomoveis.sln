@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraDeAutomoveis.Web", "LocadoraDeAutomoveis.Web\LocadoraDeAutomoveis.Web.csproj", "{4230D1E0-4A13-4A42-8C14-3DA8E872CB54}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Apresentação", "1. Apresentação", "{DD02A324-CD35-4CBB-AC28-D324F0F94AE8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Dominio", "2. Dominio", "{32CC05E8-20E6-4A31-AD82-4F1FF7321686}"
@@ -19,23 +17,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compartilhado", "Compartilh
 		IRepositorio.cs = IRepositorio.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraDeAutomoveis", "LocadoraDeAutomoveis\LocadoraDeAutomoveis.csproj", "{7C7F2056-6107-420F-866C-09D23EA91305}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloFuncionario", "ModuloFuncionario", "{6094C486-13B3-43BB-A978-DA32536546C9}"
+	ProjectSection(SolutionItems) = preProject
+		Funcionario.cs = Funcionario.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4230D1E0-4A13-4A42-8C14-3DA8E872CB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4230D1E0-4A13-4A42-8C14-3DA8E872CB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4230D1E0-4A13-4A42-8C14-3DA8E872CB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4230D1E0-4A13-4A42-8C14-3DA8E872CB54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7F2056-6107-420F-866C-09D23EA91305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7F2056-6107-420F-866C-09D23EA91305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7F2056-6107-420F-866C-09D23EA91305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7F2056-6107-420F-866C-09D23EA91305}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4230D1E0-4A13-4A42-8C14-3DA8E872CB54} = {DD02A324-CD35-4CBB-AC28-D324F0F94AE8}
 		{DB5368B3-9003-487A-98FC-104E2CFDB3F6} = {32CC05E8-20E6-4A31-AD82-4F1FF7321686}
+		{7C7F2056-6107-420F-866C-09D23EA91305} = {DD02A324-CD35-4CBB-AC28-D324F0F94AE8}
+		{6094C486-13B3-43BB-A978-DA32536546C9} = {32CC05E8-20E6-4A31-AD82-4F1FF7321686}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85C9D906-71AF-4DB3-9834-CFB5BE0F3870}
