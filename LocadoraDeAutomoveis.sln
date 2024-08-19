@@ -5,6 +5,20 @@ VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraDeAutomoveis.Web", "LocadoraDeAutomoveis.Web\LocadoraDeAutomoveis.Web.csproj", "{4230D1E0-4A13-4A42-8C14-3DA8E872CB54}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Apresentação", "1. Apresentação", "{DD02A324-CD35-4CBB-AC28-D324F0F94AE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Dominio", "2. Dominio", "{32CC05E8-20E6-4A31-AD82-4F1FF7321686}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infraestrutura", "3. Infraestrutura", "{D0755E53-808D-4C26-8728-1DD27735979D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Testes", "4. Testes", "{76CD90D1-7E5F-4067-9879-853E16213D3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compartilhado", "Compartilhado", "{DB5368B3-9003-487A-98FC-104E2CFDB3F6}"
+	ProjectSection(SolutionItems) = preProject
+		EntidadeBase.cs = EntidadeBase.cs
+		IRepositorio.cs = IRepositorio.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4230D1E0-4A13-4A42-8C14-3DA8E872CB54} = {DD02A324-CD35-4CBB-AC28-D324F0F94AE8}
+		{DB5368B3-9003-487A-98FC-104E2CFDB3F6} = {32CC05E8-20E6-4A31-AD82-4F1FF7321686}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85C9D906-71AF-4DB3-9834-CFB5BE0F3870}
