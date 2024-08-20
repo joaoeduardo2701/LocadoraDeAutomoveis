@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LocadoraDeAutomoveis.Controllers
+namespace LocadoraDeAutomoveis.WebApp.Controllers
 {
     public class GrupoAutomoveisController : Controller
     {

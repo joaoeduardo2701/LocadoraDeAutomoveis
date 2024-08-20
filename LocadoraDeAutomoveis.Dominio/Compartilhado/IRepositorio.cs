@@ -1,4 +1,4 @@
-﻿using LocadoraDeAutomoveis.Dominio.Compartilhado;
+﻿namespace LocadoraDeAutomoveis.Dominio.Compartilhado;
 
 public interface IRepositorio<TEntidade> where TEntidade : EntidadeBase
 {

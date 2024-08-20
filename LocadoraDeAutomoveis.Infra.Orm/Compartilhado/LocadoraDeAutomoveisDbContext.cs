@@ -7,7 +7,7 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
 {
     public class LocadoraDeAutomoveisDbContext : DbContext
     {
-        DbSet<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis> GrupoAutomoveis { get; set; }
+        public DbSet<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis> GrupoAutomoveis { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

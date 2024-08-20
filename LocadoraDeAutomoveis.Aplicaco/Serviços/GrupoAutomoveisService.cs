@@ -57,10 +57,7 @@ namespace LocadoraDeAutomoveis.Aplicaco
 
         public Result<List<GrupoAutomoveis>> SelecionarTodos(int usuarioId)
         {
-            var generos = repositorioGrupoAutomoveis
-                .Filtrar(f => f.UsuarioId == usuarioId);
-
-            return Result.Ok(generos);
+            return Result.Ok(repositorioGrupoAutomoveis.SelecionarTodos());
         }
     }
 }

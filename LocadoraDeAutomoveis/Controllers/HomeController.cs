@@ -2,7 +2,7 @@ using LocadoraDeAutomoveis.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace LocadoraDeAutomoveis.Controllers
+namespace LocadoraDeAutomoveis.WebApp.Controllers
 {
     public class HomeController : Controller
     {
