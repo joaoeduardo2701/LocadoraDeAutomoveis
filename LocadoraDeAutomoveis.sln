@@ -5,17 +5,19 @@ VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Apresentação", "1. Apresentação", "{DD02A324-CD35-4CBB-AC28-D324F0F94AE8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infraestrutura", "3. Infraestrutura", "{D0755E53-808D-4C26-8728-1DD27735979D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infraestrutura", "4. Infraestrutura", "{D0755E53-808D-4C26-8728-1DD27735979D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Testes", "4. Testes", "{76CD90D1-7E5F-4067-9879-853E16213D3A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Testes", "5. Testes", "{76CD90D1-7E5F-4067-9879-853E16213D3A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis", "LocadoraDeAutomoveis\LocadoraDeAutomoveis.csproj", "{7C7F2056-6107-420F-866C-09D23EA91305}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Dominio", "2. Dominio", "{C85E3589-B8EB-4518-B8BB-B1DC3A975021}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Dominio", "3. Dominio", "{C85E3589-B8EB-4518-B8BB-B1DC3A975021}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis.Dominio", "LocadoraDeAutomoveis.Dominio\LocadoraDeAutomoveis.Dominio.csproj", "{516AEC8D-B26C-4717-8C65-31A8739F4A38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraDeAutomoveis.Infra.Orm", "LocadoraDeAutomoveis.Infra.Orm\LocadoraDeAutomoveis.Infra.Orm.csproj", "{0D84CAA1-4E06-4299-AC91-C8D6A626C4D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis.Infra.Orm", "LocadoraDeAutomoveis.Infra.Orm\LocadoraDeAutomoveis.Infra.Orm.csproj", "{0D84CAA1-4E06-4299-AC91-C8D6A626C4D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Aplicação", "2. Aplicação", "{B1573A91-E31D-4D8A-895E-4275B5FE2944}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
