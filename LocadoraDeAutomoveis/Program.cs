@@ -1,4 +1,4 @@
-namespace LocadoraDeAutomoveis
+namespace LocadoraDeAutomoveis.WebApp
 {
     public class Program
     {

@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis.Infra.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Aplicação", "2. Aplicação", "{B1573A91-E31D-4D8A-895E-4275B5FE2944}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis.Aplicaco", "LocadoraDeAutomoveis.Aplicaco\LocadoraDeAutomoveis.Aplicaco.csproj", "{11CC873B-0282-4D69-8CC6-18AA6E74A202}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocadoraDeAutomoveis.Aplicacao", "LocadoraDeAutomoveis.Aplicaco\LocadoraDeAutomoveis.Aplicacao.csproj", "{11CC873B-0282-4D69-8CC6-18AA6E74A202}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

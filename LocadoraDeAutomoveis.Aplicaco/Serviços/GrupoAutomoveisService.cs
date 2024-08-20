@@ -1,7 +1,7 @@
 ﻿using FluentResults;
 using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
 
-namespace LocadoraDeAutomoveis.Aplicaco
+namespace LocadoraDeAutomoveis.Aplicacao
 {
     public class GrupoAutomoveisService
     {
