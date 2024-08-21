@@ -15,7 +15,7 @@ namespace LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis
 
         public List<string> Validar()
         {
-            List<string> erros = null;
+            List<string> erros = [];
 
             if (Nome.Length < 3)
             {

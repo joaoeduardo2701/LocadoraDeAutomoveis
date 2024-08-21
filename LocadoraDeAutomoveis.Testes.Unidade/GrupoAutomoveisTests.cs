@@ -3,6 +3,7 @@ using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
 namespace LocadoraDeAutomoveis.Testes.Unidade
 {
     [TestClass]
+    [TestCategory("Unidade")]
     public class GrupoAutomoveisTests
     {
         [TestMethod]
@@ -10,7 +11,22 @@ namespace LocadoraDeAutomoveis.Testes.Unidade
         {
             var grupo = new GrupoAutomoveis("SUV");
 
-            grupo.Validar();
+            var erros = grupo.Validar();
+
+            Assert.AreEqual(0, erros.Count);
         }
-    }
+
+        public void Deve_Criar_Instancia_Com_Erro()
+        {
+	        var grupo = new GrupoAutomoveis("SU");
+
+	        var erros = grupo.Validar();
+
+            List<string> errosEsperados = ["O nome é obrigatório"];
+
+	        Assert.AreNotEqual(0, erros.Count);
+
+            CollectionAssert.AreEqual(errosEsperados, erros);
+        }
+	}
 }
