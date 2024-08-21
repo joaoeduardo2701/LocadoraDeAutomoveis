@@ -21,43 +21,44 @@ namespace LocadoraDeAutomoveis.Aplicacao
 
         public Result<GrupoAutomoveis> Editar(GrupoAutomoveis grupoAutomoveis)
         {
-            var genero = repositorioGrupoAutomoveis.SelecionarPorId(grupoAutomoveis.Id);
+            var grupo = repositorioGrupoAutomoveis.SelecionarPorId(grupoAutomoveis.Id);
 
-            if (genero is null)
-                return Result.Fail("O genero não foi encontrado!");
+            if (grupo is null)
+                return Result.Fail("O grupo não foi encontrado!");
 
-            genero.Nome = grupoAutomoveis.Nome;
+            grupo.Nome = grupoAutomoveis.Nome;
 
-            repositorioGrupoAutomoveis.Editar(genero);
+            repositorioGrupoAutomoveis.Editar(grupo);
 
-            return Result.Ok(genero);
+            return Result.Ok(grupo);
         }
 
         public Result Excluir(int generoId)
         {
-            var genero = repositorioGrupoAutomoveis.SelecionarPorId(generoId);
+            var grupo = repositorioGrupoAutomoveis.SelecionarPorId(generoId);
 
-            if (genero is null)
-                return Result.Fail("O genero não foi encontrado!");
+            if (grupo is null)
+                return Result.Fail("O grupo não foi encontrado!");
 
-            repositorioGrupoAutomoveis.Excluir(genero);
+            repositorioGrupoAutomoveis.Excluir(grupo);
 
             return Result.Ok();
         }
 
-        public Result<GrupoAutomoveis> SelecionarPorId(int generoId)
+        public Result<GrupoAutomoveis> SelecionarPorId(int grupoId)
         {
-            var genero = repositorioGrupoAutomoveis.SelecionarPorId(generoId);
+            var grupo = repositorioGrupoAutomoveis.SelecionarPorId(grupoId);
 
-            if (genero is null)
-                return Result.Fail("O genero não foi encontrado!");
+            if (grupo is null)
+                return Result.Fail("O grupo não foi encontrado!");
 
-            return Result.Ok(genero);
-        }
+            return Result.Ok(grupo);
+        }   
 
         public Result<List<GrupoAutomoveis>> SelecionarTodos(int usuarioId)
         {
-            return Result.Ok(repositorioGrupoAutomoveis.SelecionarTodos());
+            var grupos = repositorioGrupoAutomoveis.SelecionarTodos();
+            return Result.Ok(grupos);
         }
     }
 }

@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis
 {
-    public class RepositorioGrupoAutomoveisEmOrm : RepositorioBaseEmOrm<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis>, IRepositorioGrupoAutomoveis
+    public class RepositorioGrupoAutomoveisEmOrm : 
+        RepositorioBaseEmOrm<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis>, IRepositorioGrupoAutomoveis
     {
         public RepositorioGrupoAutomoveisEmOrm(LocadoraDeAutomoveisDbContext dbContext) : base(dbContext) { }
 

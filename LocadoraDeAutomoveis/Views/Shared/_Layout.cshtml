@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LocadoraDeAutomoveis.styles.css" asp-append-version="true" />
 </head>
+
 <body class="d-flex flex-column min-vh-100">
+
     <nav class="container">
         <header class="row row-cols-2 align-items-center my-3">
             <a class="fs-3 fw-semibold text-dark" style="text-decoration: none;"asp-area="" asp-controller="Home" asp-action="Index">Locadora de Automoveis</a>
             <ul class="nav nav-pills d-grid d-md-flex justify-content-md-end">
-                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Funcionário</a></li>
-                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Grupo de Automóveis</a></li>
-                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Planos de Cobrança</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="Home" asp-action="Index">Início</a></li>
+@*                 <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Funcionário</a></li> *@
+                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="GrupoAutomoveis" asp-action="Listar">Grupo de Automóveis</a></li>
+                @* <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Planos de Cobrança</a></li>
                 <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Automóveis</a></li>
                 <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Clientes</a></li>
                 <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Condutores</a></li>
                 <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Taxas e Serviços</a></li>
                 <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Aluguéis</a></li>
-                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Configuração</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-3" asp-area="" asp-controller="" asp-action="">Configuração</a></li> *@
             </ul>
         </header>
     </nav>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -37,6 +40,7 @@
             &copy; 2024 - Locadora de Automóveis 
         </p>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

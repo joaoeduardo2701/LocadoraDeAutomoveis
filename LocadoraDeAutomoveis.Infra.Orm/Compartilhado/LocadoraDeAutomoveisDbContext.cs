@@ -1,5 +1,4 @@
-﻿using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
-using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
+﻿using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

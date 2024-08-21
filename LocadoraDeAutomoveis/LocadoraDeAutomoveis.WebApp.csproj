@@ -12,9 +12,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LocadoraDeAutomoveis.Aplicaco\LocadoraDeAutomoveis.Aplicacao.csproj" />
     <ProjectReference Include="..\LocadoraDeAutomoveis.Dominio\LocadoraDeAutomoveis.Dominio.csproj" />
     <ProjectReference Include="..\LocadoraDeAutomoveis.Infra.Orm\LocadoraDeAutomoveis.Infra.Orm.csproj" />
   </ItemGroup>

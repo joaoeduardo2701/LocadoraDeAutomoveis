@@ -1,3 +1,5 @@
+using LocadoraDeAutomoveis.Infra.Orm.Compartilhado;
+
 namespace LocadoraDeAutomoveis.WebApp
 {
     public class Program
@@ -5,6 +7,8 @@ namespace LocadoraDeAutomoveis.WebApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<LocadoraDeAutomoveisDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
