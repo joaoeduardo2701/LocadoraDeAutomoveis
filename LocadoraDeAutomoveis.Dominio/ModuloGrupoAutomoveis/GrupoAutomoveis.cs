@@ -6,9 +6,23 @@ namespace LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis
     {
         public string Nome { get; set; }
 
+        public GrupoAutomoveis() {}
+
         public GrupoAutomoveis(string nome)
         {
             Nome = nome;
+        }
+
+        public List<string> Validar()
+        {
+            List<string> erros = null;
+
+            if (Nome.Length < 3)
+            {
+                erros.Add("O nome é obrigatório");
+            }
+
+            return erros;
         }
     }
 }
