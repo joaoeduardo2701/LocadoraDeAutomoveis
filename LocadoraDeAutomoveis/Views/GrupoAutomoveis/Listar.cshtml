@@ -2,11 +2,12 @@
 
 @{
 	ViewBag.Title = "Listagem de Grupos de Automóveis";
+	MensagemViewModel? mensagem = ViewBag.Mensagem ?? null;
 }
 
 <div class="col">
     
-	<a class="btn btn-primary px-4 mt-3" href="/genero/inserir">
+	<a class="btn btn-primary px-4 mt-3" asp-action="inserir">
 		<i class="bi bi-circle-add"></i>
 		Inserir um novo Grupo de Automóvel
 	</a>
@@ -14,34 +15,11 @@
 	<div class="row gap-2 my-3 my-xl-5">
 		@foreach (var grupoAutomovel in Model)
 		{
-			<div class="card col-lg-4 col-xl-3">
-				<div class="card-header bg-transparent d-flex justify-content-between align-items-center">
-					<h5 class="p-0">@grupoAutomovel.Id</h5>
-
-					<div class="text-end d-flex align-items-center gap-3">
-						<a
-							title="Detalhes"
-							class="text-info-emphasis fs-5"
-							href="/genero/detalhes/@grupoAutomovel.Id">
-							<i class="bi bi-search"></i>
-						</a>
-						<a
-							title="Editar"
-							class="text-info-emphasis fs-5"
-							href="/genero/editar/@grupoAutomovel.Id">
-							<i class="bi bi-pencil-fill"></i>
-						</a>
-						<a
-							title="Excluir"
-							class="text-info-emphasis fs-5" href="/genero/excluir/@grupoAutomovel.Id">
-							<i class="bi bi-trash-fill"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="card-body">
-@* 					<h5 class="card-title">@grupoAutomovel.Descricao</h5> *@
-				</div>
+			<div class="card col-lg-4 col-xl-3 p-4">
+				<label class="p-0"><strong>Id:</strong> @grupoAutomovel.Id</label>
+				<label class="card-title"><strong>Nome:</strong> @grupoAutomovel.Nome</label>
+				<a class="btn btn-secondary btn-sm mb-2 my-3" href="/grupoautomoveis/editar/@grupoAutomovel.Id">Editar</a>
+				<a class="btn btn-danger btn-sm mb-2" href="/grupoautomoveis/excluir/@grupoAutomovel.Id">Excluir</a>
 			</div>
 		}
 	</div>

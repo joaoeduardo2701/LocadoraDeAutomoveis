@@ -1,53 +1,53 @@
-﻿using FluentResults;
-using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
+﻿using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
+using FluentResults;
 
 namespace LocadoraDeAutomoveis.Aplicacao
 {
     public class GrupoAutomoveisService
     {
-        private readonly IRepositorioGrupoAutomoveis repositorioGrupoAutomoveis;
+        private readonly IRepositorioGrupoAutomoveis _repositorioGrupoAutomoveis;
 
         public GrupoAutomoveisService(IRepositorioGrupoAutomoveis repositorioGrupoAutomoveis)
         {
-            this.repositorioGrupoAutomoveis = repositorioGrupoAutomoveis;
+            _repositorioGrupoAutomoveis = repositorioGrupoAutomoveis;
         }
 
         public Result<GrupoAutomoveis> Inserir(GrupoAutomoveis grupoAutomoveis)
         {
-            repositorioGrupoAutomoveis.Inserir(grupoAutomoveis);
+            _repositorioGrupoAutomoveis.Inserir(grupoAutomoveis);
 
             return Result.Ok(grupoAutomoveis);
         }
 
         public Result<GrupoAutomoveis> Editar(GrupoAutomoveis grupoAutomoveis)
         {
-            var grupo = repositorioGrupoAutomoveis.SelecionarPorId(grupoAutomoveis.Id);
+            var grupo = _repositorioGrupoAutomoveis.SelecionarPorId(grupoAutomoveis.Id);
 
             if (grupo is null)
                 return Result.Fail("O grupo não foi encontrado!");
 
             grupo.Nome = grupoAutomoveis.Nome;
 
-            repositorioGrupoAutomoveis.Editar(grupo);
+            _repositorioGrupoAutomoveis.Editar(grupo);
 
             return Result.Ok(grupo);
         }
 
         public Result Excluir(int generoId)
         {
-            var grupo = repositorioGrupoAutomoveis.SelecionarPorId(generoId);
+            var grupo = _repositorioGrupoAutomoveis.SelecionarPorId(generoId);
 
             if (grupo is null)
                 return Result.Fail("O grupo não foi encontrado!");
 
-            repositorioGrupoAutomoveis.Excluir(grupo);
+            _repositorioGrupoAutomoveis.Excluir(grupo);
 
             return Result.Ok();
         }
 
         public Result<GrupoAutomoveis> SelecionarPorId(int grupoId)
         {
-            var grupo = repositorioGrupoAutomoveis.SelecionarPorId(grupoId);
+            var grupo = _repositorioGrupoAutomoveis.SelecionarPorId(grupoId);
 
             if (grupo is null)
                 return Result.Fail("O grupo não foi encontrado!");
@@ -55,10 +55,11 @@ namespace LocadoraDeAutomoveis.Aplicacao
             return Result.Ok(grupo);
         }   
 
-        public Result<List<GrupoAutomoveis>> SelecionarTodos(int usuarioId)
+        public Result<List<GrupoAutomoveis>> SelecionarTodos()
         {
-            var grupos = repositorioGrupoAutomoveis.SelecionarTodos();
-            return Result.Ok(grupos);
-        }
+	        var grupos = _repositorioGrupoAutomoveis.SelecionarTodos();
+
+	        return Result.Ok(grupos);
+		}
     }
 }

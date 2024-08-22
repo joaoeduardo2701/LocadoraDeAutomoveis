@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
 
 namespace LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis
 {
-    public class GrupoAutomoveisConfiguration : IEntityTypeConfiguration<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis>
+    public class MapeadorGrupoAutomoveisConfiguration : IEntityTypeConfiguration<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis>
     {
         public void Configure(EntityTypeBuilder<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis> builder)
         {

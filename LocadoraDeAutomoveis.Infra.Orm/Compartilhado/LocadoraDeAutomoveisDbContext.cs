@@ -27,7 +27,7 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new GrupoAutomoveisConfiguration());
+            modelBuilder.ApplyConfiguration(new MapeadorGrupoAutomoveisConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

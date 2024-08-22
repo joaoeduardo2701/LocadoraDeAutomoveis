@@ -1,4 +1,8 @@
+using System.Reflection;
+using LocadoraDeAutomoveis.Aplicacao;
+using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
 using LocadoraDeAutomoveis.Infra.Orm.Compartilhado;
+using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
 
 namespace LocadoraDeAutomoveis.WebApp
 {
@@ -9,6 +13,15 @@ namespace LocadoraDeAutomoveis.WebApp
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDbContext<LocadoraDeAutomoveisDbContext>();
+
+            builder.Services.AddScoped<GrupoAutomoveisService>();
+
+			builder.Services.AddScoped<IRepositorioGrupoAutomoveis, RepositorioGrupoAutomoveisEmOrm>();
+
+			builder.Services.AddAutoMapper(cfg =>
+            {
+                cfg.AddMaps(Assembly.GetExecutingAssembly());
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -32,7 +45,8 @@ namespace LocadoraDeAutomoveis.WebApp
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}"
+            );
 
             app.Run();
         }
