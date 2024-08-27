@@ -7,7 +7,7 @@
 
 <div class="col">
     
-	<a class="btn btn-primary px-4 mt-3" asp-action="inserir">
+	<a class="btn btn-primary px-4 mt-3" asp-action="Inserir">
 		<i class="bi bi-circle-add"></i>
 		Inserir um novo Grupo de Automóvel
 	</a>
@@ -18,8 +18,8 @@
 			<div class="card col-lg-4 col-xl-3 p-4">
 				<label class="p-0"><strong>Id:</strong> @grupoAutomovel.Id</label>
 				<label class="card-title"><strong>Nome:</strong> @grupoAutomovel.Nome</label>
-				<a class="btn btn-secondary btn-sm mb-2 my-3" href="/grupoautomoveis/editar/@grupoAutomovel.Id">Editar</a>
-				<a class="btn btn-danger btn-sm mb-2" href="/grupoautomoveis/excluir/@grupoAutomovel.Id">Excluir</a>
+				<a title="Editar" class="btn btn-secondary btn-sm mb-2 my-3" href="/GrupoAutomoveis/Editar/@grupoAutomovel.Id">Editar</a>
+				<a title="Excluir" class="btn btn-danger btn-sm mb-2" href="/GrupoAutomoveis/Excluir/@grupoAutomovel.Id">Excluir</a>
 			</div>
 		}
 	</div>
