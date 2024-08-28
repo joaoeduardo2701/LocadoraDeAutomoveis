@@ -1,6 +1,6 @@
 using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
 
-namespace LocadoraDeAutomoveis.Testes.Unidade
+namespace LocadoraDeAutomoveis.Testes.Unidade.ModuloGrupoAutomoveis
 {
     [TestClass]
     [TestCategory("Unidade")]
@@ -18,15 +18,15 @@ namespace LocadoraDeAutomoveis.Testes.Unidade
 
         public void Deve_Criar_Instancia_Com_Erro()
         {
-	        var grupo = new GrupoAutomoveis("SU");
+            var grupo = new GrupoAutomoveis("SU");
 
-	        var erros = grupo.Validar();
+            var erros = grupo.Validar();
 
             List<string> errosEsperados = ["O nome é obrigatório"];
 
-	        Assert.AreNotEqual(0, erros.Count);
+            Assert.AreNotEqual(0, erros.Count);
 
             CollectionAssert.AreEqual(errosEsperados, erros);
         }
-	}
+    }
 }
