@@ -1,8 +1,11 @@
 using System.Reflection;
 using LocadoraDeAutomoveis.Aplicacao;
+using LocadoraDeAutomoveis.Aplicacao.Serviços;
+using LocadoraDeAutomoveis.Dominio.ModuloAutomovel;
 using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
 using LocadoraDeAutomoveis.Infra.Orm.Compartilhado;
 using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
+using LocadoraDeAutomoveis.Infra.Orm.ModuloAutomovel;
 
 namespace LocadoraDeAutomoveis.WebApp
 {
@@ -15,8 +18,10 @@ namespace LocadoraDeAutomoveis.WebApp
             builder.Services.AddDbContext<LocadoraDeAutomoveisDbContext>();
 
             builder.Services.AddScoped<GrupoAutomoveisService>();
+            builder.Services.AddScoped<AutomovelService>();
 
-			builder.Services.AddScoped<IRepositorioGrupoAutomoveis, RepositorioGrupoAutomoveisEmOrm>();
+            builder.Services.AddScoped<IRepositorioGrupoAutomoveis, RepositorioGrupoAutomoveisEmOrm>();
+            builder.Services.AddScoped<IRepositorioAutomovel, RepositorioAutomovelEmOrm>();
 
 			builder.Services.AddAutoMapper(cfg =>
             {
@@ -24,7 +29,7 @@ namespace LocadoraDeAutomoveis.WebApp
             });
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(); 
 
             var app = builder.Build();
 
