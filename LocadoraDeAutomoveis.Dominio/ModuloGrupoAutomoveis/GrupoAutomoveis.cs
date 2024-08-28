@@ -13,7 +13,7 @@ namespace LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis
             Nome = nome;
         }
 
-        public List<string> Validar()
+        public override List<string> Validar()
         {
             List<string> erros = [];
 
