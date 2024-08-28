@@ -1,4 +1,5 @@
-﻿using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
+﻿using LocadoraDeAutomoveis.Dominio.ModuloAutomovel;
+using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -7,8 +8,9 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
     public class LocadoraDeAutomoveisDbContext : DbContext
     {
         public DbSet<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis> GrupoAutomoveis { get; set; }
+        public DbSet<Automovel> Automovels { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -28,6 +30,7 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new MapeadorGrupoAutomoveisConfiguration());
+            modelBuilder.ApplyConfiguration(new MapeadorAutomovelConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }
