@@ -9,7 +9,7 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
 
         protected RepositorioBaseEmOrm(LocadoraDeAutomoveisDbContext dbContext)
         {
-            this._dbContext = dbContext;
+            _dbContext = dbContext;
         }
 
         protected abstract DbSet<TEntidade> ObterRegistros();

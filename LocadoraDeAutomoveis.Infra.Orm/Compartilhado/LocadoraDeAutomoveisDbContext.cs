@@ -1,5 +1,6 @@
 ﻿using LocadoraDeAutomoveis.Dominio.ModuloAutomovel;
 using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
+using LocadoraDeAutomoveis.Infra.Orm.ModuloAutomovel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -8,7 +9,7 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
     public class LocadoraDeAutomoveisDbContext : DbContext
     {
         public DbSet<Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis> GrupoAutomoveis { get; set; }
-        public DbSet<Automovel> Automovels { get; set; }
+        public DbSet<Automovel> Automoveis { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

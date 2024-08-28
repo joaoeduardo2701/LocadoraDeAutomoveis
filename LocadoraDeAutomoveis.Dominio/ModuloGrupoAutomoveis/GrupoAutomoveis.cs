@@ -1,12 +1,15 @@
 ﻿using LocadoraDeAutomoveis.Dominio.Compartilhado;
+using LocadoraDeAutomoveis.Dominio.ModuloAutomovel;
 
 namespace LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis
 {
     public class GrupoAutomoveis : EntidadeBase
     {
         public string Nome { get; set; }
+        public List<Automovel> Automoveis { get; set; } = [];
 
-        public GrupoAutomoveis() {}
+
+		public GrupoAutomoveis() {}
 
         public GrupoAutomoveis(string nome)
         {

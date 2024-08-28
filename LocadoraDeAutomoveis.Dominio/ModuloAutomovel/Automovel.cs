@@ -1,6 +1,5 @@
 ﻿using LocadoraDeAutomoveis.Dominio.Compartilhado;
 using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
-using System.CodeDom.Compiler;
 
 namespace LocadoraDeAutomoveis.Dominio.ModuloAutomovel
 {
@@ -13,7 +12,7 @@ namespace LocadoraDeAutomoveis.Dominio.ModuloAutomovel
 		public int GrupoAutomoveisId { get; set; }
 		public GrupoAutomoveis? GrupoAutomoveis { get; set; }
 
-        protected Automovel(){}
+        protected Automovel() { }
 
         public Automovel(
 	        string modelo,
