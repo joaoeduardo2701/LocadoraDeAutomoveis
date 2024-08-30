@@ -3,9 +3,9 @@ using LocadoraDeAutomoveis.WebApp.Models;
 
 namespace LocadoraDeAutomoveis.WebApp.Mapping
 {
-	public class GrupoAutomoveis : Profile
+	public class GrupoAutomoveisProfile : Profile
 	{
-		public GrupoAutomoveis()
+		public GrupoAutomoveisProfile()
 		{
 			CreateMap<InserirGrupoAutomoveisViewModel, Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis>();
 			CreateMap<EditarGrupoAutomoveisViewModel, Dominio.ModuloGrupoAutomoveis.GrupoAutomoveis>();
