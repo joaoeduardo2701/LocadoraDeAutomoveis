@@ -1,6 +1,4 @@
 ﻿using LocadoraDeAutomoveis.Dominio.ModuloAutomovel;
-using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
-using LocadoraDeAutomoveis.Infra.Orm.ModuloAutomovel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -30,8 +28,10 @@ namespace LocadoraDeAutomoveis.Infra.Orm.Compartilhado
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new MapeadorGrupoAutomoveisConfiguration());
-            modelBuilder.ApplyConfiguration(new MapeadorAutomovelConfiguration());
+            var assembly = typeof(LocadoraDeAutomoveisDbContext).Assembly;
+
+            modelBuilder.ApplyConfigurationsFromAssembly(assembly);
+
             base.OnModelCreating(modelBuilder);
         }
     }
