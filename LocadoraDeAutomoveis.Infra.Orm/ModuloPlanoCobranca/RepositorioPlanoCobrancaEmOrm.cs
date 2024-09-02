@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LocadoraDeAutomoveis.Infra.Orm.ModuloPlanoCobranca
 {
-    public class RepositorioPlanoCobranaEmOrm : RepositorioBaseEmOrm<PlanoCobranca>, IRepositorioPlanoCobranca
+    public class RepositorioPlanoCobrancaEmOrm : RepositorioBaseEmOrm<PlanoCobranca>, IRepositorioPlanoCobranca
     {
-        public RepositorioPlanoCobranaEmOrm(LocadoraDeAutomoveisDbContext dbContext) : base(dbContext)
+        public RepositorioPlanoCobrancaEmOrm(LocadoraDeAutomoveisDbContext dbContext) : base(dbContext)
         {
         }
 

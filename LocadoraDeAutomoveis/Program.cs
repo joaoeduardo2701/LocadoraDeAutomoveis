@@ -3,9 +3,11 @@ using LocadoraDeAutomoveis.Aplicacao;
 using LocadoraDeAutomoveis.Aplicacao.Serviços;
 using LocadoraDeAutomoveis.Dominio.ModuloAutomovel;
 using LocadoraDeAutomoveis.Dominio.ModuloGrupoAutomoveis;
+using LocadoraDeAutomoveis.Dominio.ModuloPlanoCobranca;
 using LocadoraDeAutomoveis.Infra.Orm.Compartilhado;
 using LocadoraDeAutomoveis.Infra.Orm.GrupoAutomoveis;
 using LocadoraDeAutomoveis.Infra.Orm.ModuloAutomovel;
+using LocadoraDeAutomoveis.Infra.Orm.ModuloPlanoCobranca;
 
 namespace LocadoraDeAutomoveis.WebApp
 {
@@ -19,9 +21,12 @@ namespace LocadoraDeAutomoveis.WebApp
 
             builder.Services.AddScoped<GrupoAutomoveisService>();
             builder.Services.AddScoped<AutomovelService>();
+            builder.Services.AddScoped<PlanoCobrancaService>();
 
             builder.Services.AddScoped<IRepositorioGrupoAutomoveis, RepositorioGrupoAutomoveisEmOrm>();
             builder.Services.AddScoped<IRepositorioAutomovel, RepositorioAutomovelEmOrm>();
+            builder.Services.AddScoped<IRepositorioPlanoCobranca, RepositorioPlanoCobrancaEmOrm>();
+
 
 			builder.Services.AddAutoMapper(cfg =>
             {
