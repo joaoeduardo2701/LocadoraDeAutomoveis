@@ -9,5 +9,10 @@ namespace LocadoraDeAutomoveis.WebApp.Controllers
         {
             return View();
         }
+
+        public IActionResult Inserir()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
